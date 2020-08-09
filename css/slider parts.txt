@@ -1,0 +1,153 @@
+
+/* Body */
+body{
+  background:#fff;
+}
+/* Reset */
+*{margin:0;padding:0;}
+/* Header */52, 73, 94, .7 
+header{
+  width:100%;
+  height:80px;
+  background:#222;
+}
+.logo{
+  width:50px;
+  height:65px;
+  position:relative;
+  top:7.5px;
+  float:left;
+  margin-left:5%;
+}
+.logo img{
+  width:100%;
+  height:100%;
+}
+nav{
+  width:auto;
+  height:100%;
+  float:right;
+  margin-right:5%;
+  list-style:none;
+}
+nav li{
+  width:auto;
+  margin-right:20px;
+  float:left;
+}
+nav li a{
+  font-family:Arial;
+  font-size:16px;
+  color:#fff;
+  line-height:80px;
+}
+nav select{
+  width:150px;
+  height:30px;
+  margin-top:25px;
+  font-family:Arial;
+  font-size:14px;
+  color:#666;
+  border:2px solid #aaa;
+  padding-left:10px;
+}
+nav select:focus{
+  outline:none;
+}
+
+/* Content */
+.container{
+  width:70%;
+  height:auto;
+  padding:20px 0;
+  margin:20px auto;
+}
+.container h1{
+  font-family:Arial;
+  font-size:24px;
+  color:#222;
+  text-transform:uppercase;
+  margin:20px 0;
+}
+.container h2{
+  font-family:arial;
+  font-size:16px;
+  color:#444;
+  margin-top:10px;
+}
+.container h3{
+  font-family:arial;
+  font-weight:normal;
+  font-size:16px;
+  color:#aaa;
+}
+.code{
+  width:600px;
+  height:auto;
+  margin:20px auto;
+  padding:10px 20px;
+  background:#222;
+  border-left:10px solid #aaa;
+  font-family: arial;
+  font-size:16px;
+  color:#fff;
+}
+.code span{
+  color:#89A978;
+}
+.space{
+  width:20px;
+  height:1px;
+  float:left;
+}
+
+footer{
+  width:100%;
+  height:50px;
+  background:#222;
+}
+footer h1{
+  font-family:Arial;
+  font-weight:normal;
+  font-size:14px;
+  color:#fff;
+  margin-left:5%;
+  line-height:50px;
+}
+
+
+/* Switch */
+.switch{
+  width:120px;
+  height:10px;
+  position:absolute;
+  bottom:50px;
+  z-index:99;
+  left:30px;
+}
+.switch > ul{
+  list-style:none;
+}
+.switch > ul > li{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:#333;
+  float:left;
+  margin-right:5px;
+  cursor:pointer;
+}
+.switch ul{
+  overflow:hidden;
+}
+.on{
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  background:#f39c12;
+  position:relative;
+  -webkit-animation:on 30s infinite;
+  -moz-animation:on 30s infinite;
+  animation:on 30s infinite;
+}images/recipe-images/carosell/
+
