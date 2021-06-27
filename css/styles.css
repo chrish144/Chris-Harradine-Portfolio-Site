@@ -1,33 +1,67 @@
 body{
 background-color:#343538; color:white;
+position: relative;
 }
 nav{
 background-color:#1A1A1C;
 color:white;
 text-align:center;
-padding:1px;
+padding:10;
 border-top:1px solid grey;
 border-bottom:1px solid black;
 border-radius: 10px;
 }
-
-nav ul{
-list-style:none;
+nav {
+  margin: 10px;
+  background-color: #141414;
+  border-radius: 5px;
+  padding: 0.25rem;
+}
+nav::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+nav img {
+  margin-top: 4px;float:right;
+  margin-right:10px;
 }
 
-nav li{
-display:inline;
-max-width:10%;
-max-height:10%;
-font-size:98%}
+.navigation {
+  list-style: none;
+  float: left;
+  margin-top: .7rem;
+  padding:0 .4rem;
+}
+.navigation li {
+  display: inline-block;
+}
+.navigation li:first-child {
+  margin-left: 0.5rem;
+}
+.navigation li:last-child {
+  border-right: 0.025rem grey solid;
+}
+.navigation li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #66bfbf;
+  border-left: 0.025rem grey solid;
+  padding: 1rem 0.5rem 1rem 0.5rem;
+  margin-right: -3.5px;
+}
+.navigation li a:hover {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #66bfbf;
+  color: #47abab;
+  border-left: 0.025rem solid white;
+  border-right: 0.025rem solid white;
+  padding-right: 1rem;
+  margin-right: -3.8px;
+  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+}
 
-nav li a{
-text-align:center;
-padding-left:3em;
-padding-right:3em;
-color:cyan;
-text-decoration:none;
-border-right:solid grey 2px;}
 
 nav li a:hover{
 color:white;
