@@ -68,7 +68,11 @@ nav::after {
     text-decoration: none;
     padding:0 1rem;
 }
-.main-navigation li a:active {color:#fff;}
+
+.cp {
+    color:rgb(235, 235, 235);
+}
+
 .main-navigation li a:hover {
     color: #00f7ff;
     
