@@ -16,7 +16,7 @@ body {
 }
 
 body {
-    width: 100%;
+    
   font-family: Lato;
   font-weight: 400;
   font-size: 16px;
@@ -26,7 +26,7 @@ body {
 }
 
 .body__container {
-    width:100%;
+width:100%;
 background-color: #212121;
 height:800px;
 position: relative;
