@@ -31,7 +31,6 @@ body {
 .body__container {
 width:100%;
 background-color: #212121;
-height:800px;
 position: relative;
 box-shadow: 0px 0px 4px 2px black;
 }
