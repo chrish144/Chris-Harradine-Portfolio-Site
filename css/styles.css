@@ -1,3 +1,25 @@
+/*---------------------Animations---------------------*/
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-12rem) rotate(0deg); }
+  
+  80% {
+    transform: translateX(2rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(12rem) rotate(0deg); }
+ 
+  80% {
+    transform: translateX(-2rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
 
 /*UNIVERSAL SELECTORS*/
 *,
@@ -20,12 +42,11 @@ body {
 
 body {
   font-family: Lato;
-  font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
   color: #777;
   background-color: #2c2c2c;
-  padding:0 20px; 
+  padding:0 20px 20px; 
   font-family: neuropol-x-light, sans-serif;
   font-weight: 300;
   font-style: normal;
@@ -103,6 +124,7 @@ padding:2rem  0;
     font-family: neuropol-x-light, sans-serif;
     font-weight: 300;
     font-style: italic;
+    backface-visibility: hidden;
 }
 
 .header__title__grad {
@@ -112,9 +134,13 @@ padding:2rem  0;
     color: transparent; 
 }
 
-.header__title:hover {
-    transform: translateY(-1.5rem) scale(1.04) skew(-44deg);
-}
+.tit-top {
+  animation: moveInLeft .6s ease-in-out; }
+
+
+.tit-bot {
+  animation: moveInRight .6s ease-in-out; }
+
 
 .section__center {
     background-color:;
@@ -132,18 +158,28 @@ padding:2rem  0;
 }
 .intro--section__p {
 color:rgb(148, 148, 148);
+float:left;width:70%;
+margin: 1rem 0 2rem 0;
+}
+.ch-prof-pic {
+  width:16rem;
+  border-radius: 50%;
+  border:rgb(221, 221, 221) 2px solid;
+  float: right;
+  margin:1rem 2rem 1rem 1rem;
 }
 
 /*FOOTER*/
 
 .footer--section {
   margin-bottom:0;
+  font-size: 1.4rem;
   text-align:center;
   color: #777;
   background-color: #2c2c2c;
-  padding:0 20px; 
+  padding:4rem 0; 
   box-shadow: 0px 3px 2px 1px black;
-padding:1rem 2rem;
+
 }
 .footer--section::after {
   content: "";
@@ -156,6 +192,11 @@ padding:1rem 2rem;
   list-style: none;
   float: left;
   padding:.5rem .4rem;
+  margin-left:50%;
+  transform: translate(-50%, -50%);
+  font-family: neuropol-x-light, sans-serif;
+  font-weight: 200;
+  font-style: normal;
 }
 
 .footer__social--nav li{
@@ -172,8 +213,10 @@ color: azure;
 
 .copy-text {
   clear:left;
+  margin-left:50%;
+  transform: translate(-50%, -50%);
 }
-
+/* */
 /*Specific Page Classes*/
 
 /*Index--Personal Profile*/
