@@ -67,6 +67,33 @@ box-shadow: 0px 0px 4px 2px black;
   text-align: center;
 }
 
+.ind {
+  text-indent: 2rem;
+}
+
+/*BUTTONS & LINKS*/
+
+.con-but  {
+border-radius: 20px;
+border: 1.5px solid aqua;
+color:aqua;
+padding:.35rem 1rem;
+background-color:rgb(72, 72, 72);
+box-shadow:1px 1px 3px black;
+}
+.con-but:hover, :active{
+  
+  border: 1.5px solid #6857FA;
+  background-color:rgb(63, 63, 63);
+  box-shadow:1.5px 1.5px 3.5px black;
+}
+.con-but  a{
+  text-decoration:none;
+}
+.con-but  a:hover 
+{color:#fff;}
+
+
 /*NAV*/
 
 nav {
@@ -74,7 +101,7 @@ width: 100%;
 position: sticky;
 top:0;
 z-index: 222;
-background-color: #2c2c2c;
+background-color: rgba(36, 36, 36, .95);
 height: 6rem;
 box-shadow: 0px 3px 2px 1px black;
 padding:1rem 2rem;
@@ -117,14 +144,14 @@ nav img {
 
 
 /*HEADER MAIN*/
+.header {background-image:linear-gradient(to right bottom, rgba(105, 11, 182, 0.7), rgba(4, 169, 211, 0.7)), url(bg-imgs/Profile-header-1.jpg);}
 
-.header {
+.header, .header-about {
 text-align: center;
 margin:1rem 1rem 0rem;
 padding:1.5rem 0 ;
 border-radius: 4px;
 border: inset 3px black;
-background-image:linear-gradient(to right bottom, rgba(105, 11, 182, 0.7), rgba(4, 169, 211, 0.7)), url(bg-imgs/Profile-header-1.jpg);
 background-repeat: no-repeat;
 background-size:cover;
 background-position: center;
@@ -152,12 +179,65 @@ background-position: center;
 .tit-bot {
   animation: moveInRight 1s ease-in-out; }
 
+/*HEADER ABOUT*/
+
+.header-about {background-image:linear-gradient(to right bottom, rgba(105, 11, 182, 0.45), rgba(4, 169, 211, 0.45), rgba(114, 54, 253, 0.45), rgba(4, 169, 211, 0.45)), url(bg-imgs/Profile-header-about.jpg);height: 27rem;}
+
+.about__header__title__intro {
+color:rgb(2, 247, 255);
+font-size:28px;
+text-shadow: 1px 2px 1.5px  black;
+font-style: italic;
+font-weight: 400;
+}
+
+/*CENTER SECTION*/
 
 .section__center {
     background-color:;
     width: 100%;
     padding:2rem 2rem;
 }
+
+/*EDS Tables*/
+
+.eds-table__container {
+  float: right;
+  margin:-0.5rem 0 2rem 2rem;
+  }
+.tab-tit {
+text-align: center;
+color:#6857FA;
+text-decoration: aqua underline;
+font-style:italic;font-size: 2rem;
+margin: .5rem 0 1.5rem 0;
+}
+
+ .tab-tit-lower {
+  margin: 1.5rem 0 1.5rem 0;
+ }
+
+.eds  {
+   text-align:center;
+   border-spacing:12px;
+   padding:6px;
+   border:1px solid silver;
+   border-radius: 7px;
+   color:rgb(207, 207, 207); 
+   margin: 0 auto;
+  }
+  
+  .eds th{
+    width:250px;
+    background-color: rgb(45, 45, 45); 
+    color: aqua; 
+    border-right:10px;
+    border-bottom: #6857FA 3px solid;
+  }
+  .eds tr {
+    background-color:rgb(45, 45, 45); 
+  }
+  
 
 .intro--section {
     padding:2rem 2rem;
@@ -167,19 +247,19 @@ background-position: center;
   clear: both;
   display: table;
 }
-.intro--section__header {  position: relative;
+.intro--section__header {  
   text-align: center;
   font-weight: 700;
   font-size: 3rem;
 }
 .intro__title__grad {
-  background-image: linear-gradient(to right, #860bb6, #10d3c9);
+  background-image: linear-gradient(to right, #800bb6, #6857FA, #10d3c9);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent; 
   padding-bottom: 1rem;
   border-bottom: aqua 2px solid ;
-  width: 112rem;
+  width: 84%;
   margin:0 auto;
   margin-bottom: 3rem;
 }
@@ -187,13 +267,13 @@ background-position: center;
 .intro--section__sub-head {
   color: rgb(207, 207, 207);
   font-style: italic;
+  font-size: 1.8rem;
   text-decoration: aqua underline;
   margin-bottom: 5px;
    }
    
 .intro--section__p {
 color:rgb(180, 180, 180);
-width:70%;
 margin: 1rem 0 2rem 0;
 text-align: justify;
 }
@@ -203,11 +283,21 @@ text-align: justify;
 .intro--section__p .intro--section__sub-head {
   float:left;
 }
+.intro--section__ptop{
+text-align:center;
+width: 85%;
+color:rgb(180, 180, 180);
+margin:0 auto;
+margin-bottom: 3rem;
+font-size:2rem;
+font-style: italic;
+
+}
 .ch-prof-pic {
   width:16rem;
   border-radius: 50%;
   border:rgb(221, 221, 221) 2px solid;
-  float: right;
+  
   margin:1rem 2rem 1rem 1rem;
 }
 
@@ -220,8 +310,32 @@ text-align: justify;
   margin-right:14px;
 }
 
-
-
+/*Experience Table*/
+.table1 td, th{
+  padding: 4px;
+  }
+  .table1 th{
+    background-color:#454849;
+    border-bottom: #6857FA 2px solid;
+    border-top: #C6CCC9 1px solid;color: aqua;
+  }
+  .table1 td{
+  background-color: #686B69;
+  color: white;
+  }
+  .trl{
+    text-align:center;
+    font-weight: bold;
+  }
+  .trc{
+  width:80%;
+  }
+  .table1 tfoot td{
+    background-color: #454849;
+    color:aqua;
+    text-align:center;border-bottom: 3px solid #282928;
+  }
+  
 
 /*FOOTER*/
 
