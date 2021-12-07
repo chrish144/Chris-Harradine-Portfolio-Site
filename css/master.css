@@ -1,0 +1,757 @@
+:root {
+  /*-----------------VARIABLES---START-----------*/
+  /*-----------BX-SHDWS----------*/
+  --shadow-slight: 0 2rem 5rem rgba(0, 0, 0, .09);
+  --shadow-lrg: .5rem 1rem 6rem rgba(0, 0, 0, .9);
+  /*---------BX-SHDW-GLOWS------*/
+  --shadow-glw-slight-white: .25rem .25rem 1rem var(--color-bx-shdw-glow-slt-wht);
+  --shadow-glw-lil: 1px 1px 6px var(--color-bx-shdw-glw-lil);
+  --shadow-glw-aq: 1px 1px 7px var(--color-bx-shdw-glw-aqua);
+  --shadow-glw-aq-img: 1px 1px 6px var(--color-bx-shdw-glw-aqua);
+  /*---------BX-SHDW-GLOW--COLORS------*/
+  --color-bx-shdw-glow-slt-wht: rgba(252, 252, 252, .2);
+  --color-bx-shdw-glw-lil: rgba(104, 87, 250, .99);
+  --color-bx-shdw-glw-aqua: rgba(15, 238, 244, .9);
+  /*---------BACKGROUNDS-------------------*/
+  /*-----------MN--CNT--CLR---BGS--------*/
+  --color-bg-cont-drk-1: rgba(36, 36, 36, .6);
+  --color-bg-cont-drk-2: rgba(49, 37, 68, 0.6);
+  /*----------------GRADS-----------------*/
+  /*//TODO: Create BOdy BG GRAD VAR*/
+  /*---------GRAD--COLORS----------*/
+  --color-grd-tb-hdr-1: rgba(27, 27, 36, .9);
+  --color-grd-tb-hdr-2: rgba(54, 63, 72, .9);
+  --color-grd-bg-ftr-1: rgba(18, 27, 27, 0.9);
+  --color-grd-bg-ftr-2: rgba(36, 45, 45, 0.9);
+  --color-grd-img-overlay-purp: rgba(105, 11, 182, 0.7);
+  --color-grd-img-overlay-aq: rgba(0, 148, 208, 0.7);
+  --color-bg-dark-grey-1: rgba(45, 45, 45, 0.6);
+  --color-bg-dark-grey-2: rgba(36, 36, 36, 0.6);
+  --color-bg-dark-grey-3: rgba(58, 60, 61, 0.81);
+  --color-bg-dark-grey-4: rgba(54, 54, 63, .81);
+  /*-----------BG / FG GRADS--------*/
+  --grad-img-overlay-1: linear-gradient(to right bottom, var(--color-grd-img-overlay-purp), var(--color-grd-img-overlay-aq));
+  /*-----HEADER / FOOTER------*/
+  --grad-tbl-hdr-bg: linear-gradient(to top,
+      var(--color-grd-tb-hdr-1),
+      var(--color-grd-tb-hdr-2));
+  --grad-footer: linear-gradient(to top,
+      var(--color-grd-bg-ftr-1),
+      var(--color-grd-bg-ftr-2));
+  /*-----BTN GRADS---------*/
+  --grad-btn-bg-drk-1: linear-gradient(to top,
+      var(--color-grd-tb-hdr-1),
+      var(--color-grd-tb-hdr-2));
+  /*------TEXT GRADS------*/
+  --title-grad-1: linear-gradient(to right,
+      var(--color-violet),
+      var(--color-purp),
+      var(--color-aqua-light-1),
+      var(--color-aqua-light-2));
+  /*------FONTS COLORS MAIN------*/
+  --color-white-1: #f7f7f7;
+  --color-white-2: #b9b9b9;
+  --color-white-3: #c9c9c9;
+  --color-white-4: rgb(144, 144, 144);
+  --color-white-5: #C6CCC9;
+  --color-white-6: #e4e4e4;
+  --color-grey-light-1: #a3a3a3;
+  --color-grey-dark-1: #777;
+  --color-black-1: #000000;
+  --color-black-2: #141414;
+  --color-black-3: #1d1d1d;
+  --color-aqua-light-1: #75eef6;
+  --color-aqua-light-2: #1ee6f4;
+  --color-violet: #7c00e9;
+  --color-lil: #8258f7;
+  --color-lil-2: #6857FA;
+  --color-purp: #6934fa;
+  --color-purp-2: #6f1cfb;
+  /*--------FONT SIZES----------*/
+  /*-----------Text------------*/
+  --ft-sz-xsm: ;
+  --ft-sz-sm: ;
+  --ft-sz-md: ;
+  --ft-sz-lrg: ;
+  --ft-sz-xlrg: ;
+  /*---------Headings----------*/
+  --ft-sz-h1: ;
+  --ft-sz-h2: ;
+  --ft-sz-h3: ;
+  --ft-sz-h4: ;
+  --ft-sz-h5: ;
+  /*--------TEXT--DEC----------*/
+  --color-sb-hdr-lil: var(--color-lil-2);
+  --color-sb-hdr-aqua: var(--color-aqua-light-1);
+  --txt-dec-lil-sb-hdr: underline var(--color-sb-hdr-lil) 1.4px;
+  --txt-dec-aqua-sb-hdr: underline var(--color-aqua-light-2) 1.4px;
+  /*---------BORDERS------------*/
+  --border-mn-grid-cont-top: 1px solid var(--color-bdr-tp-mn-grid-cont);
+  --border-mn-grid-cont-btm: 2px solid var(--color-bdr-btm-mn-grid-cont);
+  --border-tab-top: 1px solid var(--color-tab-bord-top);
+  --border-tab-btm: 1.5px solid var(--color-tab-bord-btm);
+  /*--BORDER--COLORS*/
+  --color-tab-bord-top: var(--color-white-5);
+  --color-tab-bord-btm: var(--color-black-3);
+  --color-bdr-tp-mn-grid-cont: var(--color-white-4);
+  --color-bdr-btm-mn-grid-cont: var(--color-black-3);
+  /*------CHANGE THESE NAMES-----*/
+  --color-primary-light-cs: #6803db;
+  --color-primary-dark-cs: #098fb8;
+  --color-nv-ft-bgc: rgba(36, 36, 36, .95);
+}
+
+/*------VARIABLES---END----*/
+/*----MAIN--CSS--UNIVERSALS----*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.6;
+  color: var(--color-white-2);
+  background-image: linear-gradient(to right bottom, var(--color-primary-light-cs), var(--color-primary-dark-cs));
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.body-container {
+  font-size: 1.5rem;
+  border-radius: 4px;
+  height: auto;
+  background-color: rgba(33, 33, 33, .8);
+  box-shadow: var(--shadow-lrg);
+  margin: 1rem auto;
+  max-width: 144rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    " nav"
+    " grid-1"
+    " grid-2"
+    " footer";
+  grid-template-rows: auto;
+  grid-row-gap: 1.4rem;
+}
+
+/*---------HEADINGS---------*/
+h1, h2, h3, h4, h5, :link {
+  font-family: neuropol-x-light, sans-serif;
+  color: var(--color-white-1);
+  font-weight: 300;
+}
+
+h4 {
+  margin-bottom: 1rem;
+}
+
+/*HDR--TXT--DC*/
+.sh-txt-dec-aq {
+  text-decoration: var(--txt-dec-aqua-sb-hdr);
+}
+
+.sh-txt-dec-lil {
+  text-decoration: var(--txt-dec-lil-sb-hdr);
+}
+
+/*CUSTOM UNIVERSAL CLASSES*/
+.ac {
+  text-align: center;
+}
+
+.ind {
+  text-indent: 2rem;
+}
+
+.bnb {
+color: var(--color-white-6);
+font-weight: 500;
+}
+
+/*UNIVERSAL STYLES*/
+.grid-1>*, .grid-2>* {
+  border-top: var(--border-mn-grid-cont-top);
+  border-bottom: var(--border-mn-grid-cont-btm);
+}
+
+.grid-1>*, .grid-2>*, nav, footer {
+  padding: 1.4rem 1.8rem;
+  border-radius: 8px;
+}
+
+/*-----------GRID---LAYOUTS----------*/
+.home-grid-1-main-content,
+.home-grid-2-main-content,
+.home-grid-1-side-content,
+.home-grid-2-side-content {
+  background: var(--color-bg-cont-drk-1);
+  box-shadow: var(--shadow-glw-slight-white);
+}
+
+.grid-1 {
+  grid-area: grid-1;
+  display: grid;
+  grid-template-columns: repeat(12, .1fr);
+  grid-template-rows: ;
+  grid-template-areas:
+    "header header header header header header header header header header header header"
+    "hm-main-g1 hm-main-g1 hm-main-g1 hm-main-g1 hm-main-g1 hm-main-g1 hm-main-g1 hm-main-g1 hm-sd-g1 hm-sd-g1 hm-sd-g1 hm-sd-g1"
+  ;
+  padding: 0 2rem;
+  grid-column-gap: 1.4rem;
+  grid-row-gap: 1.4rem;
+}
+
+
+.grid-2 {
+  grid-area: grid-2;
+  display: grid;
+  grid-template-columns: repeat(12, .1fr);
+  grid-template-rows: 1 / -1;
+  grid-template-areas:
+
+    "hm-main-g2 hm-main-g2 hm-main-g2 hm-main-g2 hm-main-g2 hm-main-g2 hm-main-g2 hm-main-g2 hm-main-g2 hm-main-g2 hm-main-g2 hm-main-g2"
+  ;
+  padding: 0 2rem;
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+}
+
+.home-grid-1-main-content {
+  grid-area: hm-main-g1;
+}
+
+.home-grid-1-side-content {
+  grid-area: hm-sd-g1;
+}
+
+.eds-grid-section {
+  margin-top: 1rem;
+  display: grid;
+  grid-row-gap: 5rem;
+}
+
+.home-grid-2-main-content {
+  grid-area: hm-main-g2;
+}
+
+.home-grid-2-side-content {
+  grid-area: hm-sd-g2;
+}
+.Overview-W-S-K {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: ;
+  grid-template-areas:
+    "OV-it-1 OV-it-1 OV-it-1 OV-it-1"
+    "OV-it-2 OV-it-2 OV-it-2 OV-it-2"
+    "OV-it-3 OV-it-4 OV-it-5 OV-it-6"
+    "OV-it-7 OV-it-7 OV-it-7 OV-it-7"
+    "OV-it-8 OV-it-8 OV-it-8 OV-it-8"
+    "OV-it-9 OV-it-9 OV-it-9 OV-it-9"
+    "OV-it-10 OV-it-10 OV-it-10 OV-it-10"
+    "OV-it-11 OV-it-11 OV-it-11 OV-it-11"
+    "OV-it-12 OV-it-12 OV-it-12 OV-it-12"
+    "OV-it-13 OV-it-13 OV-it-13 OV-it-13"
+    "OV-it-14 OV-it-14 OV-it-14 OV-it-14"
+    "OV-it-15 OV-it-15 OV-it-15 OV-it-15"
+    "OV-it-16 OV-it-16 OV-it-16 OV-it-16"
+    "OV-it-17 OV-it-17 OV-it-17 OV-it-18"
+    "OV-it-19 OV-it-19 OV-it-20 OV-it-20"
+
+  ;
+  padding: 0 1rem;
+  grid-column-gap: 2rem;
+  grid-row-gap: 1.7rem;
+}
+
+
+/*---OV--WSK--GRD AREA SECTIONS---*/
+.OV-it-1 {
+  grid-area: OV-it-1;
+}
+
+.OV-it-2 {
+  grid-area: OV-it-2;
+}
+
+.OV-it-3 {
+  grid-area: OV-it-3;
+}
+
+.OV-it-4 {
+  grid-area: OV-it-4;
+}
+
+.OV-it-5 {
+  grid-area: OV-it-5;
+}
+
+.OV-it-6 {
+  grid-area: OV-it-6;
+}
+
+.OV-it-7 {
+  grid-area: OV-it-7;
+}
+.OV-it-8 {
+  grid-area: OV-it-8;
+}
+
+.OV-it-9{
+  grid-area: OV-it-9;
+}
+.OV-it-10 {
+  grid-area: OV-it-10;
+}
+.OV-it-11 {
+  grid-area: OV-it-11;
+}
+.OV-it-12 {
+  grid-area: OV-it-12;
+}
+.OV-it-13 {
+  grid-area: OV-it-13;
+}
+.OV-it-14 {
+  grid-area: OV-it-14;
+}
+.OV-it-15 {
+  grid-area: OV-it-15;
+}
+.OV-it-16 {
+  grid-area: OV-it-16;
+}
+.OV-it-17 {
+  grid-area: OV-it-17;
+}
+.OV-it-18 {
+  grid-area: OV-it-18;
+}
+.OV-it-19 {
+  grid-area: OV-it-19;
+}
+.OV-it-20 {
+  grid-area: OV-it-20;
+  margin-top:30px;
+}
+
+/*---ED-&-SKILS TABLE GRID SECTION--*/
+/*--------------NAVIGATION------------*/
+nav {
+  background-color: var(--color-nv-ft-bgc);
+}
+
+/*------------NAV-MIAN------------*/
+nav {
+  font-size: 1.6rem;
+  grid-area: nav;
+  position: sticky;
+  top: 0px;
+  height: 6rem;
+  box-shadow: 0px 3px 2px 1px black;
+  padding: 1rem 2rem;
+}
+
+nav::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+nav img {
+  float: right;
+  margin-right: 10px;
+  height: 4.25rem;
+  width: 4.25rem;
+}
+
+.main-navigation {
+  list-style: none;
+  float: left;
+  padding: .5rem .4rem;
+}
+
+.main-navigation li {
+  display: inline-block;
+}
+
+.main-navigation li a {
+  color: #9c9c9c;
+  text-decoration: none;
+  padding: 0 1rem;
+}
+
+.cp {
+  color: #fff;
+}
+
+.main-navigation li a:hover, span:hover {
+  color: #00f7ff;
+}
+
+/*---------------HEADER SECTION----------------------*/
+header {
+  grid-area: header;
+  box-shadow: var(--ds-glw-lil);
+  background: #545454;
+  background-image: var(--grad-img-overlay-1), url(bg-imgs/Profile-header-1.jpg);
+  bckground-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: .4rem;
+  /*min-height:200px;*/
+}
+
+.page-header__title {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 60px auto;
+  line-height: 100px;
+  height: 90px;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-style: italic;
+  text-shadow: 1px 2px 2px black;
+}
+
+.page-header__title__h1-ch {
+  padding-bottom: 2px;
+  text-decoration: underline 1.5px var(--color-purp-2);
+}
+
+.page-header__title__slider {
+  font-family: neuropol-x-light, sans-serif;
+  color: var(--color-white-1);
+  font-size: 32px;
+  font-weight: 400;
+  margin-left: 14px;
+  box-sizing: border-box;
+  animation: hm-hd-slider 20s linear infinite;
+  text-decoration: underline 1.5px var(--color-aqua-light-2);
+}
+
+/*---ANIMATIONS----*/
+@keyframes hm-hd-slider {
+  0% {
+    margin-top: -900px;
+  }
+
+  7% {
+    margin-top: -800px;
+  }
+
+  13% {
+    margin-top: -600px;
+  }
+
+  19% {
+    margin-top: -600px;
+  }
+
+  25% {
+    margin-top: -400px;
+  }
+
+  31% {
+    margin-top: -400px;
+  }
+
+  37% {
+    margin-top: -200px;
+  }
+
+  43% {
+    margin-top: -200px;
+  }
+
+  49% {
+    margin-top: 0px;
+  }
+
+  55% {
+    margin-top: 0px;
+  }
+
+  61% {
+    margin-top: 200px;
+  }
+
+  67% {
+    margin-top: 200px;
+  }
+
+  73% {
+    margin-top: 400px;
+  }
+
+  79% {
+    margin-top: 400px;
+  }
+
+  85% {
+    margin-top: 600px;
+  }
+
+  93% {
+    margin-top: 600px;
+  }
+
+  100% {
+    margin-top: 800px;
+  }
+}
+
+/*---------------HEADER SECTION END----------------------*/
+/*--------OVERVIEW WORK SKILS AND KNOWLEDGE-----------*/
+
+.OV-W-S-K-P-INDT {
+  text-indent: 1rem;
+}
+
+.Overview-W-S-K__intro-section {
+  text-align: center;
+}
+
+.Overview-W-S-K:not(first-child) {
+  text-align: justify;
+}
+
+.Overview-W-S-K__intro-section__title {
+  font-size: 2.2rem;
+  font-style: italic;
+  background-image: var(--title-grad-1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  padding-bottom: .5rem;
+  border-bottom: 2px solid var(--color-violet);
+  width: 84%;
+  margin: .75rem auto;
+}
+
+.Overview-W-S-K__intro-section__text {
+  font-size: 1.75rem;
+  font-weight: 100;
+  color: var(--color-white-2);
+}
+
+.chris-director-img {
+  border: 4px solid #444;
+  border-radius: 4px;
+  height: 35rem;
+  box-shadow: var(--shadow-glw-aq-img);align-items: stretch;
+}
+
+
+
+/*UNIVERSAL TABLE STYLE SELECTORS */
+.tab-tit {
+  color: var(--color-aqua-light-1);
+  text-decoration: var(--txt-dec-lil-sb-hdr);
+  font-size: 1.8rem;
+  margin-bottom: 1.8rem;
+  text-indent: 1rem;
+  font-style: italic;
+}
+.tab-tit-lg {
+  color: var(--color-aqua-light-1);
+  text-decoration: var(--txt-dec-lil-sb-hdr);
+  font-size: 2.2rem;
+  margin-bottom: 1.8rem;
+  text-indent: 1rem;
+  font-style: italic;
+}
+
+.tab-col-cats {
+  color: var(--color-white-2);
+  line-height: 27px;
+  font-size: 1.6rem;
+  text-decoration: underline 1.4px var(--color-aqua-light-2);
+  background-image: var(--grad-tbl-hdr-bg);
+}
+
+.tab-col-bg-1 {
+  background-color: var(--color-bg-dark-grey-1);
+}
+
+.tab-col-bg-2 {
+  background-color: var(--color-bg-dark-grey-2);
+}
+
+/*---SKILS--KNOWLEDGE--AND--EDUCATION--TABLES--GRD1--SD--CNTENT---*/
+.eds-tbl {
+  margin-bottom: .5rem;
+  width: 100%;
+  border-radius: 4px;
+  border-top: var(--border-tab-top);
+  border-bottom: var(--border-tab-btm);
+  color: var(--color-white-3);
+}
+
+.eds-tbl tr th {
+  border-bottom: 1px solid var(--color-lil-2);
+}
+
+.eds-tbl th, td {
+  text-align: left;
+  padding: .9rem;
+}
+
+.eds-tb-1 {
+  box-shadow: var(--shadow-glw-aq);
+}
+
+.eds-tb-2 {
+  box-shadow: var(--shadow-glw-lil);
+}
+
+.eds-tbl tr :first-child {
+  width: 24rem;
+}
+.work-examples-links-section {
+border: 1px solid grey;
+border-radius: 4px;
+padding: 1rem;
+text-align:center;
+box-shadow: var(--shadow-glw-aq);
+}
+.work-examples-links-section__header {
+text-decoration: var(--txt-dec-lil-sb-hdr);
+text-align: center;
+
+font-style:italic;
+margin-bottom: 2rem;
+}
+
+.work-examples-links__text {
+  font-size: 1.6rem;
+}
+.work-examples-links-section__recipes-imgs {
+  width:100%;
+  border: aqua 2px inset;
+  border-radius: 4px;
+}
+
+
+/*----PROFESIONAL EXPERINCE TABLE GRID TWO MAIN CONTENT----*/
+.prof-exp-tbl {
+  box-shadow: var(--shadow-glw-lil);
+}
+
+.prof-exp-tbl, thead {
+  border-top: var(--border-mn-grid-cont-top);
+  border-radius: 4px;
+}
+
+.prof-exp-tbl, tfoot {
+  border-bottom: var(--border-tab-btm);
+  border-radius: 8px;
+}
+
+.prof-exp-tbl td, th {
+  padding: 4px;
+}
+
+.prof-exp-tbl th {
+  background-image: var(--grad-tbl-hdr-bg);
+  border-bottom: var(--color-lil-2) 2px solid;
+  color: var(--color-white-5);
+}
+
+
+.prof-exp-tbl td {
+  color: var(--color-white-5);
+}
+
+.trl {
+  text-align: center;
+  font-weight: bold;
+}
+
+.trc {
+  width: 80%;
+}
+
+.prof-exp-tbl tfoot td {
+  background-image: var(--grad-footer);
+  color: var(--color-lil-2);
+  text-align: center;
+  font-size:1.6rem;
+}
+
+.con-but {
+  background-image: var(--grad-btn-bg-drk-1);
+  border: var(--border-tab-top);
+  border-radius: 4px;
+  padding: .25rem;
+  font-size: 1.4rem;
+}
+
+.con-but a:link {
+  text-decoration: none;
+}
+
+/*----------FOOTER SECTION----------------*/
+footer {
+  grid-area: footer;
+  font-size: 1.4rem;
+  padding: 4rem 0;
+  background-image: var(--grad-footer);
+  border-top: var(--border-tab-btm);
+}
+
+footer::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.footer__social--nav {
+  margin: 0 auto;
+  list-style: none;
+  float: left;
+  padding: .5rem .4rem;
+  margin-left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: neuropol-x-light, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.footer__social--nav li {
+  display: inline-block;
+}
+
+.footer__social--nav a:link, a:visited {
+  text-decoration: none;
+  color: aqua;
+}
+
+.footer__social--nav a:hover {
+  color: azure;
+}
+
+.copy-text {
+  clear: left;
+  margin-left: 50%;
+  transform: translate(-50%, -50%);
+}
