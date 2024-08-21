@@ -1,0 +1,356 @@
+<!DOCKTYPE html>
+<html>
+	
+<head>
+
+<title>Example Recipe Images From Chris Harrdaine</title>
+
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Christopher Harradine Creative Portfolio Site</title>
+
+  <meta name="discription" content="Christopher Harradine's Professional Creative Profile Portfolio Site Containing; Christopher Harradine's Professional Cuisine Photography and Creative Images along with his Web Portfolio and his Research over the past 15 years into the Cause and Cure of all Disease and the workings f the Quantum Universe">
+  <meta name="keywords" content="Christopher Harradine, Alkaline Cuisine, Altenative Cures For Disease, Quantum Health, Quantum Cuisine, NLP, Cuisine Photography, Web Design,">
+  <meta name="author" content="Christopher Harradine">
+
+<link rel="stylesheet" href="css/master.css">
+
+
+<style>
+	
+	/*Creates a card that displays additional content on hover.
+
+Use overflow: hidden on the card to hide elements that overflow vertically.
+Use the :hover and :focus-within pseudo-class selectors to change the card's styling as necessary when it's hovered or it or its contents are focused.
+Set transition: 0.3s ease all to create a transition effect on hover/focus.
+
+*/
+
+body {
+	background: #454545;
+	padding: 20px 20px 0px 20px;
+}
+	
+	
+header {
+	text-align: center;
+	background: #353535;
+	height: 14vh;
+	width 100%;
+ 	box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+ 	border-radius: 8px;
+	margin: 20px  4px 20px 4px;
+	padding: 1rem;
+	color: white;
+	overflow: hidden;
+}
+
+.header-left {
+	float:left; 
+	display: inline-block;
+}
+	
+.header-left img {
+	height: 75%;
+	margin-top:12px;
+}
+	
+.header-center {
+	text-align: center;
+	clear: left; 
+	display: inline-block;
+	width: 600px;
+}
+
+.header-center h2{
+	font-style: italic;
+	color:cyan;
+	text-decoration: underline;
+	margin-top: -10px;
+	margin-bottom: -5px;
+}
+
+
+.header-center p{
+
+
+}
+
+.header-right {
+	float:right; 
+	display: inline-block;
+
+}
+
+.header-right img {
+	width: 82%;
+	border: 1px solid cyan;
+	border-radius: 4px;
+	margin-top: -7px;
+
+}
+
+.card {
+
+  
+  border-radius: 8px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: #353535;
+  font-size: 1rem;
+  color: #fff;
+  box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+  height: 100%;
+  width: 100%;
+  border-radius: 4px;
+  transition: all 500ms;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+.card * {
+  transition: 0.3s ease all;
+ display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card img {
+  margin: 0;
+  width: 100%;
+ height:87%;
+  object-fit: cover;
+  display: block;
+}
+
+.card h3 {
+  font-style:italic;
+  margin: 0;
+  padding: 12px 12px 48px;
+  line-height: 32px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.card .focus-content {
+  display: block;
+  padding: 8px 12px;
+}
+
+.card p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.card:hover img, .card:focus-within img {
+  margin-top: -80px;
+}
+
+.card:hover h3, .card:focus-within h3 {
+  padding: 8px 12px 0;
+}
+
+
+.image-mosaic {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-auto-rows: 240px;
+}
+
+
+/*    Media Queries    */	
+	
+@media screen and (min-width: 600px) {
+  .card-tall {
+    grid-row: span 2 / auto;
+  }
+
+  .card-wide {
+    grid-column: span 2 / auto;
+  }
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+
+	<!--------MAIN NAV SECTION------->
+    <nav>
+      <ul class="main-navigation">
+        <li><a href="index.html">Professional Profile</a></li>
+        <li><a href="recipe-imgs.html"><span class="cp">Creative Portfolio</span></a></li>
+      </ul>
+      <img alt="Christopher Harradine Logo" src="img/ch-grad-Logo.png" />
+    </nav>
+
+<header>
+<div class="header-left">
+<img src="img/CH-Logo.png"/>
+</div>
+<div class="header-center">
+<h2>Alkaline Recipe Image Demo</h2>
+<p>Images by Chris Harradine to view more details simply hover over the images. <i>"please note these images are simply for demonstration purposes and are not currently linked to recipes."</i></p>
+</div>
+<div class="header-right">
+<img src="img/chris-web.jpg"/>
+</div>
+</header>
+
+<div class="image-mosaic">
+
+	<div class="card card-wide card-tall">
+	  <img src="img/Sphelt-Soda-Bread.jpg"/>
+	  <h3>Sphelt Soda Bread</h3>
+	  <div class="focus-content">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/> <a href="#" class="btn">Link to source</a>
+		</p>
+	  </div>
+	</div>
+
+	<div class="card card-wide card-tall">
+	  <img src="img/Fondant-Pots-and-Chilli-Cabbage.jpg"/>
+	  <h3>Fondant Potatoes with Chilli Cabbage</h3>
+	  <div class="focus-content">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/> <a href="#" class="btn">Link to source</a>
+		</p>
+	  </div>
+	</div>
+	
+	<div class="card  card-tall">
+	  <img src="img/Swiss-Chard-and-Spinach-with-roasted-winter-vegetables -07.jpg"/>
+	  <h3>Chard with Roasted Veg</h3>
+	  <div class="focus-content">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/> <a href="#" class="btn">Link to source</a>
+		</p>
+	  </div>
+	</div>
+	
+	<div class="card card-tall">
+	  <img src="img/Roasted-Ratatouille-with-Tofu-02.jpg"/>
+	  <h3>Roasted Ratatouille</h3>
+	  <div class="focus-content">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/> <a href="#" class="btn">Link to source</a>
+		</p>
+	  </div>
+	</div>
+	
+	<div class="card card-wide card-tall">
+	  <img src="img/Sausage-and-Squash-Winter-Casserole.jpg"/>
+	  <h3>Winter Veggie Sausage and Squash Casserole</h3>
+	  <div class="focus-content">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/> <a href="#" class="btn">Link to source</a>
+		</p>
+	  </div>
+	</div>
+
+	<div class="card card-wide card-tall">
+	  <img src="img/Ravioli-in-Red-Pepper-Pesto.jpg"/>
+	  <h3>Sphelt Ravioli in a Red Pepper Pesto</h3>
+	  <div class="focus-content">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/> <a href="#" class="btn">Link to source</a>
+		</p>
+	  </div>
+	</div>
+
+
+	<div class="card card-wide card-tall">
+	  <img src="img/Winter-Vegetable-Platter.jpg"/>
+	  <h3>Lorem ipsum</h3>
+	  <div class="focus-content">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/> <a href="#" class="btn">Link to source</a>
+		</p>
+	  </div>
+	</div>
+	
+	<div class="card card-wide card-tall">
+	  <img src="img/Body-Builder-Salad01_01.jpg"/>
+	  <h3>Lorem ipsum</h3>
+	  <div class="focus-content">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/> <a href="#" class="btn">Link to source</a>
+		</p>
+	  </div>
+	</div>
+	
+	<div class="card card-tall">
+	  <img src="img/carrot-and-apple-compotte.jpg"/>
+	  <h3>Roasted Ratatouille</h3>
+	  <div class="focus-content">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/> <a href="#" class="btn">Link to source</a>
+		</p>
+	  </div>
+	</div>
+	
+	<div class="card card-tall">
+	  <img src="img/Super-Green-Smoothie.jpg"/>
+	  <h3>Roasted Ratatouille</h3>
+	  <div class="focus-content">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/> <a href="#" class="btn">Link to source</a>
+		</p>
+	  </div>
+	</div>
+	
+	<div class="card card-wide card-tall">
+	  <img src="img/strawbery-tart.jpg"/>
+	  <h3>Lorem ipsum</h3>
+	  <div class="focus-content">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/> <a href="#" class="btn">Link to source</a>
+		</p>
+	  </div>
+	</div>
+	
+	<div class="card card-wide card-tall">
+	  <img src="img/baby-veg-broth.jpg"/>
+	  <h3>Lorem ipsum</h3>
+	  <div class="focus-content">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/> <a href="#" class="btn">Link to source</a>
+		</p>
+	  </div>
+	</div>
+	
+	<div class="card card-wide card-tall">
+	  <img src="img/caulli-onion-tom-and-spinach-sarni.jpg"/>
+	  <h3>Lorem ipsum</h3>
+	  <div class="focus-content">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/> <a href="#" class="btn">Link to source</a>
+		</p>
+	  </div>
+	</div>
+	
+	<div class="card card-wide card-tall">
+	  <img src="img/Apple-Chips.jpg"/>
+	  <h3>Lorem ipsum</h3>
+	  <div class="focus-content">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/> <a href="#" class="btn">Link to source</a>
+		</p>
+	  </div>
+	</div>
+	
+	<div class="card card-tall">
+	  <img src="img/Tom-celery-and-pepper-juice.jpg"/>
+	  <h3>Lorem ipsum</h3>
+	  <div class="focus-content">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/> <a href="#" class="btn">Link to source</a>
+		</p>
+	  </div>
+	</div>
+	
+
+</div>
+<!-- image-mosaic-end -->
+
+</body>
+
+
+
+</html>

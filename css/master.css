@@ -129,7 +129,7 @@ body {
   background-image: linear-gradient(to right bottom, var(--color-primary-light-cs), var(--color-primary-dark-cs));
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 100vh;
+
 }
 
 .body-container {
@@ -140,8 +140,9 @@ body {
   box-shadow: var(--shadow-lrg);
   margin: 1rem auto;
   max-width: 144rem;
-  display: grid;
   grid-template-columns: 1fr;
+  display: grid;
+
   grid-template-areas:
     " nav"
     " grid-1"
@@ -229,7 +230,7 @@ font-weight: 500;
 
     .grid-1 {
 
-      grid-template-columns: repeat(12, .1fr);
+      grid-template-columns: repeat(12, 1fr);
 
       grid-template-rows: ;
       grid-template-areas:
@@ -240,7 +241,7 @@ font-weight: 500;
 
     .grid-2 {
 
-      grid-template-columns: repeat(12, .1fr);
+      grid-template-columns: repeat(12, 1fr);
       grid-template-rows: 1 / -1;
       grid-template-areas:
 
@@ -334,11 +335,11 @@ font-weight: 500;
     "OV-it-15 OV-it-15 OV-it-15 OV-it-15"
     "OV-it-21 OV-it-21 OV-it-21 OV-it-21"
     "OV-it-16 OV-it-16 OV-it-16 OV-it-16"
-    "OV-it-17 OV-it-17 OV-it-17 OV-it-18"
+    "OV-it-17 OV-it-17 OV-it-17 OV-it-17"
     "OV-it-19 OV-it-19 OV-it-19 OV-it-19"
     "OV-it-20 OV-it-20 OV-it-20 OV-it-20"
-
   ;
+
   padding: 0 1rem;
   grid-column-gap: 2rem;
   grid-row-gap: 1.7rem;
@@ -363,7 +364,7 @@ font-weight: 500;
       "OV-it-15 OV-it-15 OV-it-15 OV-it-15"
       "OV-it-21 OV-it-21 OV-it-21 OV-it-21"
       "OV-it-16 OV-it-16 OV-it-16 OV-it-16"
-      "OV-it-17 OV-it-17 OV-it-17 OV-it-18"
+      "OV-it-17 OV-it-17 OV-it-17 OV-it-17"
       "OV-it-19 OV-it-19 OV-it-20 OV-it-20"
     ;
   }
@@ -387,7 +388,7 @@ font-weight: 500;
       "OV-it-15 OV-it-15 OV-it-15 OV-it-15"
       "OV-it-21 OV-it-21 OV-it-21 OV-it-21"
       "OV-it-16 OV-it-16 OV-it-16 OV-it-16"
-      "OV-it-17 OV-it-17 OV-it-17 OV-it-18"
+      "OV-it-17 OV-it-17 OV-it-17 OV-it-17"
       "OV-it-19 OV-it-19 OV-it-20 OV-it-20"
     ;
   }
@@ -531,30 +532,48 @@ header {
   bckground-size: cover;
   background-repeat: no-repeat;
   margin-bottom: .4rem;
+
   /*min-height:200px;*/
 }
 
 .page-header__title {
-  font-size: 22px;
+
   font-weight: bold;
   margin: 60px auto;
   line-height: 100px;
   height: 90px;
   text-align: left;
-  display: flex;
-  justify-content: center;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+
+
+
+  /*display: flex;
+align-items: center;
+justify-content: center;
   align-items: center;
+grid-template-columns: 1.1fr 1.1fr 2fr .5fr;
+  */
+
   overflow: hidden;
   font-style: italic;
   text-shadow: 1px 2px 2px black;
 }
 
+
+
+
+
 .page-header__title__h1-ch {
+
   padding-bottom: 2px;
   text-decoration: underline 1.5px var(--color-purp-2);
+  font-size: 32px;
 }
 
 .page-header__title__slider {
+
   font-family: neuropol-x-light, sans-serif;
   color: var(--color-white-1);
   font-size: 32px;
@@ -563,6 +582,34 @@ header {
   box-sizing: border-box;
   animation: hm-hd-slider 20s linear infinite;
   text-decoration: underline 1.5px var(--color-aqua-light-2);
+}
+
+
+@media (max-width:1000px) {
+.page-header__title {
+  line-height: 100px;
+  height:144px;
+  margin: 20px auto;
+}
+  .page-header__title {
+  -webkit-flex-flow: row wrap;
+      flex-flow: row wrap;
+
+      display: flex;
+    margin-top:0px;
+  }
+  .page-header__title__h1-ch {
+  margin-bottom:40px;
+  font-size: 27px;
+  }
+  .page-header__title__slider {
+  animation: hm-hd-slider-lft 20s linear infinite ;font-size: 32px;
+  font-weight: 400;
+  margin-left: 14px;
+  box-sizing: border-box;
+  font-size: 27px;
+
+  }
 }
 
 /*---ANIMATIONS----*/
@@ -636,6 +683,80 @@ header {
   }
 }
 
+
+
+/*---------ANIMATIONS LEFT-------------*/
+
+/*---ANIMATIONS----*/
+@keyframes hm-hd-slider-lft {
+  0% {
+    margin-top: 400px;
+  }
+
+  7% {
+    margin-top: 300px;
+  }
+
+  13% {
+    margin-top: 200px;
+  }
+
+  19% {
+    margin-top: 200px;
+  }
+
+  25% {
+    margin-top: 100px;
+  }
+
+  31% {
+    margin-top: 100px;
+  }
+
+  37% {
+    margin-top: 000px;
+  }
+
+  43% {
+    margin-top: 000px;
+  }
+
+  49% {
+    margin-top: -100px;
+  }
+
+  55% {
+    margin-top: -100px;
+  }
+
+  61% {
+    margin-top: -200px;
+  }
+
+  67% {
+    margin-top: -200px;
+  }
+
+  73% {
+    margin-top: -300px;
+  }
+
+  79% {
+    margin-top: -300px;
+  }
+
+  85% {
+    margin-top: -400px;
+  }
+
+  93% {
+    margin-top: -400px;
+  }bottom
+
+  100% {
+    margin-top: -500px;
+  }
+}
 /*---------------HEADER SECTION END----------------------*/
 /*--------OVERVIEW WORK SKILS AND KNOWLEDGE-----------*/
 
@@ -685,9 +806,9 @@ header {
 }
 
 .QC-LOGO{
-  margin: 2.2rem 0 0 2.2rem;
+  margin: -2rem 0 0 2.2rem;
+  float:right;
 }
-
 
 
 /*UNIVERSAL TABLE STYLE SELECTORS */
