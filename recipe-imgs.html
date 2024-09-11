@@ -29,19 +29,29 @@ Set transition: 0.3s ease all to create a transition effect on hover/focus.
 */
 
 body {
-	background: #454545;
-	padding: 20px 20px 0px 20px;
+	background-image: linear-gradient(to right bottom, var(--color-primary-light-cs), var(--color-primary-dark-cs));
+    background-size: cover;
+    background-repeat: no-repeat;
+	
 }
 	
-	
+.body-innr-rec-sec {
+     margin: 1rem auto;
+     max-width: 144rem;
+     padding: 10px;
+     background: rgba(18, 18, 18, 0.6);
+     border-radius: 8px;
+        
+    }  
+    
 header {
 	text-align: center;
-	background: #353535;
+	background: rgba(53, 53, 53, 0.46);
 	height: 18vh;
 	width 100%;
  	box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
  	border-radius: 8px;
-	margin: 20px  4px 20px 4px;
+	margin: 20px  1.4rem 20px 1.4rem;
 	padding: 1rem;
 	color: white;
 	overflow: hidden;
@@ -53,8 +63,8 @@ header {
 }
 	
 .header-left img {
-	height: 75%;
-	margin-top:12px;
+	height: 47%;
+	margin-top:33px;
 }
 	
 .header-center {
@@ -66,15 +76,16 @@ header {
 
 .header-center h2{
 	font-style: italic;
+    font-size: 1.8rem;
 	color:cyan;
 	text-decoration: underline;
-	margin-top: -10px;
-	margin-bottom: -5px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 
 .header-center p{
-
+font-size: 1.5rem
 
 }
 
@@ -88,20 +99,19 @@ header {
 	width: 82%;
 	border: 1px solid cyan;
 	border-radius: 4px;
-	margin-top: -7px;
+	margin-top: 1.7rem;
 
 }
 
 .card {
-
   
   border-radius: 8px;
   box-sizing: border-box;
   overflow: hidden;
-  background: #353535;
+  background: rgba(54, 54, 54, 0.49);
   font-size: 1rem;
   color: #fff;
-  box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+  box-shadow: rgba(3, 8, 20, 0.3) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.3) 0px 0.6rem 0.43rem;
   height: 100%;
   width: 100%;
   border-radius: 4px;
@@ -115,7 +125,7 @@ header {
 
 .card * {
   transition: 0.3s ease all;
- display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -124,7 +134,7 @@ header {
 .card img {
   margin: 0;
   width: 100%;
- height:87%;
+  height:87%;
   object-fit: cover;
   display: block;
 }
@@ -132,20 +142,25 @@ header {
 .card h3 {
   font-style:italic;
   margin: 0;
-  padding: 12px 12px 48px;
-  line-height: 32px;
+  padding: 11px 12px 48px;
+  line-height: 22px;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: underline 1px solid aqua;
 }
 
 .card .focus-content {
   display: block;
-  padding: 8px 12px;
+  padding: 9px 12px;
 }
 
 .card p {
-  margin: 0;
-  line-height: 1.5;
+margin: 0;
+line-height: 1.5;
+font-size: 1.5rem;
+text-align: center;
+margin-bottom: 1rem;
 }
 
 .card:hover img, .card:focus-within img {
@@ -155,13 +170,19 @@ header {
 .card:hover h3, .card:focus-within h3 {
   padding: 8px 12px 0;
 }
+    
+    .card a:link {
+        font-size: 1.2rem;
+        color:aqua;
+        font-style: italic;
+    }
 
 
 .image-mosaic {
   display: grid;
-  gap: 1rem;
+  gap: 1.2rem;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  grid-auto-rows: 240px;
+  grid-auto-rows: 240px;margin: 0 1.5rem;
 }
 
 
@@ -184,172 +205,239 @@ header {
 
 <body>
 
+    <div class="body-innr-rec-sec">
 
-	<!--------MAIN NAV SECTION------->
-    <nav>
-      <ul class="main-navigation">
-        <li><a href="index.html">Professional Profile</a></li>
-        <li><a href="recipe-imgs.html"><span class="cp">Creative Portfolio</span></a></li>
-      </ul>
-      <img alt="Christopher Harradine Logo" src="img/ch-grad-Logo.png" />
-    </nav>
+	    <!--------MAIN NAV SECTION------->
+        <nav>
+              <ul class="main-navigation">
+                <li><a href="index.html">Professional Profile</a></li>
+                <li class="select-bg"><a href="recipe-imgs.html"><span class="cp">Creative Portfolio</span></a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+              </ul>
+              <img alt="Christopher Harradine Logo" src="img/ch-grad-Logo.png" />
+        </nav>
 
-<header>
-<div class="header-left">
-<img src="img/CH-Logo.png"/>
-</div>
-<div class="header-center">
-<h2>Alkaline Recipe Image Demo</h2>
-<p>Images by Chris Harradine to view more details simply hover over the images. <i>"please note these images are simply for demonstration purposes and are not currently linked to recipes. test push"</i></p>
-</div>
-<div class="header-right">
-<img src="img/chris-web.jpg"/>
-</div>
+        <header>
+            <div class="header-left">
+                <img src="img/CH-Logo.png"/>
+            </div>
+            <div class="header-center">
+                <h2>Alkaline Recipe Image Demo</h2>
+                <p>Images by Chris Harradine to view more details simply hover over the images. 
+                    <i>"please note these images are simply for demonstration purposes and are not currently linked to recipes. test push"</i>
+                </p>
+            </div>
+            <div class="header-right">
+                <img src="img/chris-web.jpg"/>
+            </div>
 </header>
+
+    <!----Recipe IMGS Stsrt---->
+
 
 <div class="image-mosaic">
 
 	<div class="card card-wide card-tall">
 	  <img src="img/Sphelt-Soda-Bread.jpg"/>
-	  <h3>Sphelt Soda Bread</h3>
+	  <h3>Spelt Soda Bread</h3>
 	  <div class="focus-content">
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/> <a href="#" class="btn">Link to source</a>
-		</p>
+          <p>A hearty, yeast free, <i>Spelt Soda Bread</i>that goes perfectly  with a fresh veggie soup.</p>
+		    <a href="#" class="btn">Link to source</a>
 	  </div>
 	</div>
-<!--
+
 	<div class="card card-wide card-tall">
-	  <img src="img/Fondant-Pots-and-Chilli-Cabbage.jpg"/>
+	  <img src="img/Fondant-Pots-and-Chilli-Cabbage.JPG"/>
 	  <h3>Fondant Potatoes with Chilli Cabbage</h3>
 	  <div class="focus-content">
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/> <a href="#" class="btn">Link to source</a>
-		</p>
+          <p>A light yet warming dish that would make a perfect cooked lunch or even a substantial dinner.</p>
+          <a href="#" class="btn">Link to source</a>
 	  </div>
 	</div>
 	
 	<div class="card  card-tall">
-	  <img src="img/Swiss-Chard-and-Spinach-with-roasted-winter-vegetables -07.jpg"/>
+	  <img src="img/Swiss-Chard-and-Spinach-with-roasted-winter-vegetables-07.JPG"/>
 	  <h3>Chard with Roasted Veg</h3>
-	  <div class="focus-content">
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/> <a href="#" class="btn">Link to source</a>
-		</p>
-	  </div>
+	   <div class="focus-content">
+		    <p>This delicious dish makes a great, healthy alternative to a <i>Traditional Roast.</i>
+		    </p>
+		    <a href="#" class="btn">Link to source</a>
+	   </div>
 	</div>
 	
-	-->
 	
 	<div class="card card-tall">
 	  <img src="img/Roasted-Ratatouille-with-Tofu-02.jpg"/>
 	  <h3>Roasted Ratatouille</h3>
 	  <div class="focus-content">
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/> <a href="#" class="btn">Link to source</a>
+		<p>A fantastic, healthy <i>Ratatouille</i> with mushrooms and tofu.
 		</p>
+		<a href="#" class="btn">Link to source</a>
 	  </div>
 	</div>
+	
 	
 	<div class="card card-wide card-tall">
 	  <img src="img/Sausage-and-Squash-Winter-Casserole.jpg"/>
 	  <h3>Winter Veggie Sausage and Squash Casserole</h3>
 	  <div class="focus-content">
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/> <a href="#" class="btn">Link to source</a>
+		<p>A hearty, winter casserole with veggie sausages that makes a perfect meal for two served with some seasonal green veg.
 		</p>
+		<a href="#" class="btn">Link to source</a>
 	  </div>
 	</div>
 
 	<div class="card card-wide card-tall">
-	  <img src="img/Ravioli-in-Red-Pepper-Pesto-1.jpg"/>
-	  <h3>Sphelt Ravioli in a Red Pepper Pesto</h3>
+	  <img src="img/Ravioli-in-Red-Pepper-Pesto-1.JPG"/>
+	  <h3>Spelt Ravioli in a Red Pepper Pesto</h3>
 	  <div class="focus-content">
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/> <a href="#" class="btn">Link to source</a>
+		<p>A delicious, <i>Aubergine and Red Pepper Ravioli</i> in a Vegan, <i>Tomato and Pepper Pesto</i>. 
 		</p>
+		<a href="#" class="btn">Link to source</a>
 	  </div>
 	</div>
 
 
 	<div class="card card-wide card-tall">
-	  <img src="img/Winter-Vegetable-Platter.jpg"/>
-	  <h3>Lorem ipsum</h3>
+	  <img src="img/Pumpkin-and-Mediterranean-Veg-Roast.JPG"/>
+	  <h3>Pumpkin and Mediterranean Veg Roast</h3>
 	  <div class="focus-content">
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/> <a href="#" class="btn">Link to source</a>
+		<p>A great, healthy roast alternative with wealth of <i>Mediterranean Flavours.</i><br/> <a href="#" class="btn">Link to source</a>
 		</p>
 	  </div>
 	</div>
 	
 	<div class="card card-wide card-tall">
-	  <img src="img/Body-Builder-Salad01_01.jpg"/>
-	  <h3>Lorem ipsum</h3>
+	  <img src="img/Body-Builder-Salad01_01.JPG"/>
+	  <h3>Body Builder Salad</h3>
 	  <div class="focus-content">
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/> <a href="#" class="btn">Link to source</a>
-		</p>
+		<p>A delicious salad that is packed with protein and optimal alkalising partnerships. This is a perfect meal for anyone looking to pack on lean optimized protein to rapidly repair muscle. 
+		</p><a href="#" class="btn">Link to source</a>
 	  </div>
 	</div>
 	
 	<div class="card card-tall">
-	  <img src="img/carrot-and-apple-compotte.jpg"/>
-	  <h3>Roasted Ratatouille</h3>
+	  <img src="img/carrot-and-apple-compotte.JPG"/>
+	  <h3>Carrot and Apple Compote</h3>
 	  <div class="focus-content">
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/> <a href="#" class="btn">Link to source</a>
+		<p>A simple, delicious breakfast that is packed full of optimal nutrient combinations.
 		</p>
+		<a href="#" class="btn">Link to source</a>
 	  </div>
 	</div>
 	
 	<div class="card card-tall">
 	  <img src="img/Super-Green-Smoothie.jpg"/>
-	  <h3>Roasted Ratatouille</h3>
+	  <h3>The Green Machine</h3>
 	  <div class="focus-content">
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/> <a href="#" class="btn">Link to source</a>
+		<p>A green, protein packed, muscle building, <i>Monster Smoothie.</i> 
 		</p>
+		<a href="#" class="btn">Link to source</a>
 	  </div>
 	</div>
 	
 	<div class="card card-wide card-tall">
-	  <img src="img/strawbery-tart.jpg"/>
-	  <h3>Lorem ipsum</h3>
+	  <img src="img/strawbery-tart.JPG"/>
+	  <h3>A Gluten Free, Vegan Strawberry Tart</h3>
 	  <div class="focus-content">
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/> <a href="#" class="btn">Link to source</a>
+		<p>With an <i>Oat Base, Vegan Almond Custard and Fresh Strawberries.</i>
 		</p>
+		<a href="#" class="btn">Link to source</a>
 	  </div>
 	</div>
 	
 	<div class="card card-wide card-tall">
 	  <img src="img/baby-veg-broth.jpg"/>
-	  <h3>Lorem ipsum</h3>
+	  <h3>Baby Vegetable Broth</h3>
 	  <div class="focus-content">
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/> <a href="#" class="btn">Link to source</a>
-		</p>
-	  </div>
-	</div>
-	
-	<div class="card card-wide card-tall">
-	  <img src="img/caulli-onion-tom-and-spinach-sarni.jpg"/>
-	  <h3>Lorem ipsum</h3>
-	  <div class="focus-content">
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/> <a href="#" class="btn">Link to source</a>
-		</p>
-	  </div>
-	</div>
-	
-	<div class="card card-wide card-tall">
-	  <img src="img/Apple-Chips.jpg"/>
-	  <h3>Lorem ipsum</h3>
-	  <div class="focus-content">
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/> <a href="#" class="btn">Link to source</a>
+		<p>A live, hearty broth that makes a great lunch or dinner and is very quick and easy to cook and packed full of essential <i>Alkaline Nutrients.</i><br/> <a href="#" class="btn">Link to source</a>
 		</p>
 	  </div>
 	</div>
 	
 	<div class="card card-tall">
-	  <img src="img/Tom-celery-and-pepper-juice.jpg"/>
-	  <h3>Lorem ipsum</h3>
+	  <img src="img/Cinamon-Gogi-Bread.jpg"/>
+	  <h3>Cinnamon Gogi Bread</h3>
 	  <div class="focus-content">
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/> <a href="#" class="btn">Link to source</a>
+		<p>A delicious <i>Spelt, Cinnamon Fruit Bread.</i> <br/> <a href="#" class="btn">Link to source</a>
 		</p>
 	  </div>
 	</div>
 	
+	
+	
+	<div class="card card-tall">
+	  <img src="img/Savoury-Biscotti.jpg"/>
+	  <h3>Savoury Biscotti</h3>
+	  <div class="focus-content">
+		<p><i>A Vegan and Gluten Free,</i> light and delicious snack that's perfect for dipping.
+		</p>
+		<a href="#" class="btn">Link to source</a>
+	  </div>
+	</div>
+	
+	<div class="card card-wide card-tall">
+	  <img src="img/caulli-onion-tom-and-spinach-sarni.jpg"/>
+	  <h3>Cauliflower Bread Sandwich</h3>
+	  <div class="focus-content">
+		<p><i>A Herby Cauliflower Bread</i> with red onions, tomatoes, spinach and basil
+		</p>
+		<a href="#" class="btn">Link to source</a>
+	  </div>
+	</div>
+	
+	<div class="card card-tall">
+	  <img src="img/Tom-celery-and-pepper-juice.jpg"/>
+	  <h3>Carrot Tomato and Pepper Juice</h3>
+	  <div class="focus-content">
+		<p>A refreshing start to the day<br/> <a href="#" class="btn">Link to source</a>
+		</p>
+	  </div>
+	</div>
+	
+	<div class="card card-wide card-tall">
+	      <img src="img/Apple-Chips.jpg"/>
+	      <h3>Cinnamon Apple Chips</h3>
+	      <div class="focus-content">
+		    <p>Dehydrated Apple and Cinnamon Chips a Simple Light and Delicious Snack 
+		    </p>
+		    <a href="#" class="btn">Link to source</a>	
+	      </div>
+	</div>
+	
+	<div class="card card-wide card-tall">
+	      <img src="img/Seeded-Tomato-and-basil-Bread.jpg"/>
+	      <h3>Seeded Tomato and Basil Bread</h3>
+	      <div class="focus-content">
+		    <p>Dehydrated Apple and Cinnamon Chips a Simple Light and Delicious Snack 
+		    </p>
+		    <a href="#" class="btn">Link to source</a>	
+	      </div>
+	</div>
+	
 
 </div>
-<!-- image-mosaic-end -->
+                <!-- image-mosaic-end -->
+
+       <!-- Footer -->
+                    
+         <footer class="ac">
+         <ul class="footer__social--nav">
+           <li><a href="index.html">Professional Profile |</a></li>
+        <li><a href="recipe-imgs.html">Creative Portfolio |</a></li>
+            <li><a href="contact.html">Contact Me |</a></li>
+            <li><a href="#">Linked In |</a></li>
+          </ul>
+      <p class="copy-text">&copy; MMXXIV Christopher Harradine</p>
+      Powered By DMI 
+        </footer>
+    
+                    <!-- Footer End -->             
+                   
+    </div>
+                    <!-- inner-end -->
+                    
+                   
 
 </body>
 

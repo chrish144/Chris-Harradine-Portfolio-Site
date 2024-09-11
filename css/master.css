@@ -23,6 +23,10 @@
   --color-grd-tb-hdr-2: rgba(54, 63, 72, .9);
   --color-grd-bg-ftr-1: rgba(18, 27, 27, 0.9);
   --color-grd-bg-ftr-2: rgba(36, 45, 45, 0.9);
+    
+  --color-grd-bg-nav-1: rgba(18, 27, 27, 0.94);
+  --color-grd-bg-nav-2: rgba(36, 45, 45, 0.94);
+    
   --color-grd-img-overlay-purp: rgba(105, 11, 182, 0.7);
   --color-grd-img-overlay-aq: rgba(0, 148, 208, 0.7);
   --color-bg-dark-grey-1: rgba(45, 45, 45, 0.6);
@@ -38,6 +42,12 @@
   --grad-footer: linear-gradient(to top,
       var(--color-grd-bg-ftr-1),
       var(--color-grd-bg-ftr-2));
+    
+    --grad-nav: linear-gradient(to top,
+      var(--color-grd-bg-nav-1),
+      var(--color-grd-bg-nav-2));
+    
+    
   /*-----BTN GRADS---------*/
   --grad-btn-bg-drk-1: linear-gradient(to top,
       var(--color-grd-tb-hdr-1),
@@ -135,6 +145,7 @@ body {
 .body-container {
   font-size: 1.5rem;
   border-radius: 4px;
+  padding: 10px;
   height: auto;
   background-color: rgba(33, 33, 33, .8);
   box-shadow: var(--shadow-lrg);
@@ -151,6 +162,39 @@ body {
   grid-template-rows: auto;
   grid-row-gap: 1.4rem;
 }
+
+ .body-innr-contact-sec {
+     margin: 1rem auto;
+     max-width: 144rem;
+     padding: 10px;
+     background: rgba(18, 18, 18, 0.6);
+     border-radius: 8px;  
+    }  
+
+.body-innr-contact-sec .contact {
+    height: 59vh;
+   
+}
+.body-innr-contact-sec .contact_box {
+   margin: 144px auto;
+    text-align: center;
+}
+
+.body-innr-contact-sec .contact_box h2 {
+    font-size: 20px;
+        text-decoration: underline 1px solid aqua
+}
+.body-innr-contact-sec .contact_box p{
+   margin: 14px auto;
+    font-size: 1.6rem;
+    font-style: italic; 
+}
+.body-innr-contact-sec .contact_box a:link{
+    color: aqua;
+    font-size: 1.4rem;
+    text-decoration:underline 2px dotted white;
+}
+ 
 
 /*---------HEADINGS---------*/
 h1, h2, h3, h4, h5, :link {
@@ -270,6 +314,9 @@ font-weight: 500;
 .eds-grid-row-4 {
   grid-area: grd-1-sc-it-4;
 }
+.eds-grid-row-5{
+  grid-area: grd-1-sc-it-5;
+}
 .eds-grid-section {
   margin-top: 1rem;
   display: grid;
@@ -279,14 +326,15 @@ font-weight: 500;
 "grd-1-sc-it-2"
 " grd-1-sc-it-3"
 " grd-1-sc-it-4"
+      "grd-1-sc-it-5"
   ;
 }
 @media (min-width:640px){
   .eds-grid-section {
   grid-column-gap: 1rem;
   grid-template-areas:
-"grd-1-sc-it-2 grd-1-sc-it-4"
-"grd-1-sc-it-1 grd-1-sc-it-3"
+"grd-1-sc-it-2   grd-1-sc-it-4"
+"grd-1-sc-it-1 grd-1-sc-it-3 grd-1-sc-it-5"
   ;
   }
 }
@@ -298,6 +346,7 @@ font-weight: 500;
   "grd-1-sc-it-2"
   " grd-1-sc-it-3"
   " grd-1-sc-it-4"
+        "grd-1-sc-it-5"
     ;
   }
 }
@@ -472,8 +521,9 @@ font-weight: 500;
 /*---ED-&-SKILS TABLE GRID SECTION--*/
 /*--------------NAVIGATION------------*/
 nav {
-  background-color: var(--color-nv-ft-bgc);
-}
+  background-image: var(--grad-nav);
+    /*background-image: linear-gradient(to bottom, var(--color-nv-ft-bgc), var( --color-grd-bg-ftr-1));
+*/}
 
 /*------------NAV-MIAN------------*/
 nav {
@@ -482,8 +532,10 @@ nav {
   position: sticky;
   top: 0px;
   height: 6rem;
-  box-shadow: 0px 3px 2px 1px black;
+  box-shadow: 0px 3px 2px 1px #141414;
   padding: 1rem 2rem;
+  margin:0 1.5rem;
+    border-radius: 3px;
 }
 
 nav::after {
@@ -507,6 +559,9 @@ nav img {
 
 .main-navigation li {
   display: inline-block;
+  border-right: 2px inset #2e2e2e;
+  padding: 4px;
+  margin-top: -2px;
 }
 
 .main-navigation li a {
@@ -519,6 +574,18 @@ nav img {
   color: #fff;
 }
 
+.select-bg {
+   background-color: rgba(29, 29, 29, 0.50); 
+   border-radius: 5px;
+    border-top: 3px inset #2f2f2f;
+    border-bottom: 2px outset #3a3a3a;
+    
+}
+
+.prof-prof-left-border {
+    border-left: 2px outset #2e2e2e;
+}
+
 .main-navigation li a:hover, span:hover {
   color: #00f7ff;
 }
@@ -529,7 +596,7 @@ header {
   box-shadow: var(--ds-glw-lil);
   background: #545454;
   background-image: var(--grad-img-overlay-1), url(bg-imgs/Profile-header-1.jpg);
-  bckground-size: cover;
+  background-size: cover;
   background-repeat: no-repeat;
   margin-bottom: .4rem;
 
@@ -787,8 +854,9 @@ grid-template-columns: 1.1fr 1.1fr 2fr .5fr;
 
 .Overview-W-S-K__intro-section__text {
   font-size: 1.75rem;
-  font-weight: 100;
+  font-weight: 300;
   color: var(--color-white-2);
+  font-style: italic;
 }
 
 .chris-director-img {
@@ -882,10 +950,17 @@ padding: 1rem;
 text-align:center;
 box-shadow: var(--shadow-glw-aq);
 }
+
+.work-examples-links-section a:link img{
+   margin-bottom:20px 
+}
+.work-examples-links-section h3{
+   margin-bottom:30px 
+}
+
 .work-examples-links-section__header {
 text-decoration: var(--txt-dec-lil-sb-hdr);
 text-align: center;
-
 font-style:italic;
 margin-bottom: 2rem;
 }
@@ -893,6 +968,14 @@ margin-bottom: 2rem;
 .work-examples-links__text {
   font-size: 1.6rem;
 }
+.web-examples-links__text {
+    color: aqua;
+    font-style: italic;
+    margin-top: 10px;
+    
+}
+
+
 @media (min-width:640px) {
 .work-examples-links__text{
   font-size: 1.4rem;
@@ -969,9 +1052,10 @@ height:5rem;
 footer {
   grid-area: footer;
   font-size: 1.4rem;
-  padding: 4rem 0;
+  padding: 7rem 0;
   background-image: var(--grad-footer);
   border-top: var(--border-tab-btm);
+    margin:2rem -1rem -1rem -1rem;border-radius: 2px;
 }
 
 footer::after {
