@@ -24,8 +24,8 @@
   --color-grd-bg-ftr-1: rgba(18, 27, 27, 0.9);
   --color-grd-bg-ftr-2: rgba(36, 45, 45, 0.9);
     
-  --color-grd-bg-nav-1: rgba(18, 27, 27, 0.94);
-  --color-grd-bg-nav-2: rgba(36, 45, 45, 0.94);
+  --color-grd-bg-nav-1: rgba(26, 36, 36, 0.96);
+  --color-grd-bg-nav-2: rgba(45, 45, 45, 0.96);
     
   --color-grd-img-overlay-purp: rgba(105, 11, 182, 0.7);
   --color-grd-img-overlay-aq: rgba(0, 148, 208, 0.7);
@@ -270,7 +270,7 @@ font-weight: 500;
   grid-template-areas:;
 }
 
-@media (min-width:1060px) {
+@media (min-width:1040px) {
 
     .grid-1 {
 
@@ -346,7 +346,7 @@ font-weight: 500;
   "grd-1-sc-it-2"
   " grd-1-sc-it-3"
   " grd-1-sc-it-4"
-        "grd-1-sc-it-5"
+  "grd-1-sc-it-5"
     ;
   }
 }
@@ -530,9 +530,9 @@ nav {
   font-size: 1.6rem;
   grid-area: nav;
   position: sticky;
-  top: 0px;
+  top: 0;
   height: 6rem;
-  box-shadow: 0px 3px 2px 1px #141414;
+  box-shadow: 0 3px 2px 1px #141414;
   padding: 1rem 2rem;
   margin:0 1.5rem;
     border-radius: 3px;
@@ -551,6 +551,16 @@ nav img {
   width: 4.25rem;
 }
 
+@media screen and (max-width: 777px) {
+  nav img {
+    display: none;
+  }
+
+	}
+
+
+
+
 .main-navigation {
   list-style: none;
   float: left;
@@ -559,9 +569,19 @@ nav img {
 
 .main-navigation li {
   display: inline-block;
+  margin-top: -6px;
+  border-top:  1.5px inset #7c7c7c;
   border-right: 2px inset #2e2e2e;
-  padding: 4px;
-  margin-top: -2px;
+  border-bottom: outset 1.5px #1a1a1a;
+  border-left: 2.5px solid #2e2e2e;
+  border-radius: 5px;
+  padding: 2px;
+  box-shadow: 0 1px 1px 1px #141414;
+  background-image: linear-gradient(to right bottom,
+    rgba(64, 64, 64, .4),
+    rgba(14, 14, 14, .4));
+  line-height: 32px
+  
 }
 
 .main-navigation li a {
@@ -574,11 +594,12 @@ nav img {
   color: #fff;
 }
 
-.select-bg {
+.main-navigation li.select-bg {
    background-color: rgba(29, 29, 29, 0.50); 
    border-radius: 5px;
-    border-top: 3px inset #2f2f2f;
-    border-bottom: 2px outset #3a3a3a;
+    border-top: 3px inset #2c2c2c;border-left: 2px solid #2f2f2f;border-bottom: 1px inset #353535;box-shadow: 0 0 0 0 #141414;
+    
+
     
 }
 
@@ -652,11 +673,11 @@ grid-template-columns: 1.1fr 1.1fr 2fr .5fr;
 }
 
 
-@media (max-width:1000px) {
+@media (max-width:1180px) {
 .page-header__title {
   line-height: 100px;
   height:144px;
-  margin: 20px auto;
+  margin: 20px auto;position:relative;
 }
   .page-header__title {
   -webkit-flex-flow: row wrap;
@@ -666,16 +687,18 @@ grid-template-columns: 1.1fr 1.1fr 2fr .5fr;
     margin-top:0px;
   }
   .page-header__title__h1-ch {
-  margin-bottom:40px;
-  font-size: 27px;
+  /*margin-bottom:140px;*/position:absolute; top: -35px;
+  font-size: 22px;z-index: 100;background-color: rgba(44, 44, 44, 0.79);padding: 5px 10px 5px 10px;height:76px;border-radius:10px;
   }
   .page-header__title__slider {
-  animation: hm-hd-slider-lft 20s linear infinite ;font-size: 32px;
+  animation: hm-hd-slider-lft 20s linear infinite ;
   font-weight: 400;
-  margin-left: 14px;
+  margin-left: 64px;
   box-sizing: border-box;
-  font-size: 27px;
-
+  font-size: 22px;z-index: 0;
+  }
+  .tit-slide-pad {
+    padding-top: 10px;
   }
 }
 
@@ -876,6 +899,8 @@ grid-template-columns: 1.1fr 1.1fr 2fr .5fr;
 .QC-LOGO{
   margin: -2rem 0 0 2.2rem;
   float:right;
+ 
+  
 }
 
 
