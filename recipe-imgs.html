@@ -44,37 +44,41 @@ body {
         
     }  
     
+
+	/*------------HEADER CREATIVE PORTFOLIO-----------------------------*/
+
+
 header {
 	text-align: center;
 	background: rgba(53, 53, 53, 0.46);
 	height: 17rem;
-	width 100%;
- 	box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+	width: 98%;
+ 	box-shadow: rgba(3, 8, 20, 0.1) 0 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0 0.075rem 0.175rem;
  	border-radius: 8px;
-	margin: 20px  1.4rem 20px 1.4rem;
+	margin: 5rem  auto 4rem auto;
 	padding: 1rem;
 	color: white;
 	overflow: hidden;
 }
 
-.header-left {
+ .header-left {
 	float:left; 
-	display: inline-block;
+	
 }
 	
-.header-left img {
+ .header-left img {
 	height: 47%;
 	margin-top:33px;
 }
 	
-.header-center {
+ .header-center {
 	text-align: center;
 	clear: left; 
 	display: inline-block;
 	width: 600px;
 }
 
-.header-center h2{
+ .header-center h2{
 	font-style: italic;
     font-size: 1.8rem;
 	color:cyan;
@@ -84,51 +88,80 @@ header {
 }
 
 
-.header-center p{
-font-size: 1.5rem
+ .header-center p{
+font-size: 1.5rem;
+font-family: neuropol-x-light, sans-serif;
+  margin-top: 2rem;
 
 }
 
-.header-right {
+ .header-right {
 	float:right; 
-	display: inline-block;
-
 }
 
-.header-right img {
+ .header-right img {
 	width: 82%;
 	border: 1px solid cyan;
 	border-radius: 4px;
 	margin-top: 1.7rem;
 
 }
+
+ header .header-center a:link {
+  text-decoration: none;
+  color: #c5c5c5;
+}
+ header .header-center a:visited {
+   color: #a1a1a1;
+}
+
+ header .header-center a:hover {
+   color: aqua;
+}
 	
-	
-	
-	
-	
-	
-	
-	
+/*------------HEADER QUERIES-----------------------------*/
+
 	
 	@media (max-width:1046px) {
 		
 		header {
-			height: 19rem;
+			height: 19rem;overflow: auto;
+		}
+		.header-center  {
+			margin: 2px 20px;clear: left;overflow: auto;
 		}
 		.header-center h2{
 			font-size: 1.5rem;
+			margin: 20px auto; font-size: 14;
 		}
 		.header-center p{
             font-size: 1.4rem;
-			overflow: auto;
+			
 			width: 70%;margin: 0 auto;
 
         }
+		
+		.secondary-header  {
+			padding: 0.4rem 0; 
+			overflow: auto;
+			
+		}
+		.secondary-header p {
+			
+			font-size: 1.2rem;
+			margin: 0 2rem;
+		}
+		.secondary-header h2 {
+			margin-bottom: 0.4rem;
+		}
+
 	}
 	
 	@media (max-width:858px) {
-		
+		.header-center {
+			
+			width: auto;
+		}
 		.header-center p{
 			width: 70%;
 		}
@@ -139,7 +172,7 @@ font-size: 1.5rem
 			display: none;
 		}
 	}
-	
+
 
 .card {
   
@@ -220,7 +253,7 @@ margin-bottom: 1rem;
   display: grid;
   gap: 1.2rem;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  grid-auto-rows: 240px;margin: 0 1.5rem;
+  grid-auto-rows: 240px;margin: 5rem 1.5rem;
 }
 
 
@@ -281,23 +314,65 @@ margin-bottom: 1rem;
               <img alt="Christopher Harradine Logo" src="img/ch-grad-Logo.png" />
         </nav>
 
-        <header>
+        <header id="Marketing" class="creative-port">
             <div class="header-left">
                 <img src="img/CH-Logo.png"/>
             </div>
             <div class="header-center">
-                <h2>Alkaline Recipe Image Demo</h2>
-                <p>Images by Chris Harradine to view more details simply hover over the images. 
-                    <i>"please note these images are simply for demonstration purposes and are not currently linked to recipes. test push"</i>
-                </p>
+				<h2>Marketing, Photography &amp; Recipe Image Demos</h2>
+              <p>Please find examples below of some of my <a href="#Marketing">Marketing Projects</a>, 
+				  <a href="#Gallery">Creative Photography</a> &amp; <a href="#Recipes">Cuisine Photography</a>.</p>
             </div>
             <div class="header-right">
                 <img src="img/chris-web.jpg"/>
             </div>
 </header>
 
-    <!----Recipe IMGS Stsrt---->
+    <!----Marketing IMGS Stsrt---->
+    
+    <div class="marketing-container cont-clear-fix">
+       <div class="marketing-img nhs-jp-cont mk-img-od">
+           <img src="img/NHS.jpg" alt="" class=" NHS">
+           <br>
+           <img src="img/Juice-Plus+-For-Health-and-WeightLoss.png" alt="" class="JP">
+       </div>
+        <img src="img/Z-factor-Seminar.jpg" alt="" class="marketing-img MYF">
+        <img src="img/Howard-seminar.jpg" alt="" class="marketing-img W-DNA mk-img-od">
+        
+        <img src="img/The-Quick-Way-To-Quit-Smoking.jpg" alt="" class="marketing-img QWQ">
+        
+    </div>
+    
+    <hr id="Gallery">
 
+    
+    <!--------Gallery-Container---------------------->
+    
+    <div class="secondary-header" >
+    <h2>Photo Galery</h2>
+    <p>Please see below some images from my creative photography portfolio.</p>
+    </div>
+    
+    <div class="gallery-container cont-clear-fix">
+        
+        <img src="img/gallery-full-image-ca-3.jpg" alt="" class="glry-img glry-img-1 glry-img-od">
+        <img src="img/gallery-full-image-bah-crp.jpg" alt="" class="glry-img glry-img-2">
+        <img src="img/gallery-full-image-ca-1.jpg" alt="" class="glry-img glry-img-3 glry-img-od">
+        <img src="img/gallery-full-image-ca-4.jpg" alt="" class="glry-img glry-img-4">
+        
+        
+    </div>
+    
+<hr id="Recipes">
+
+
+<!----Recipe IMGS Start---->
+
+<div class="secondary-header">
+    <h2>Alkaline Recipe Image Demo</h2>
+	<p>Images by Chris Harradine to view more details simply hover over the recipe. 
+                    <i>"please note these images are simply for demonstration purposes and are not currently linked to recipes."</i></p>
+    </div>
 
 <div class="image-mosaic">
 
@@ -411,7 +486,7 @@ margin-bottom: 1rem;
 	</div>
 	
 	<div class="card card-wide card-tall">
-	  <img src="img/baby-veg-broth.JPG"/>
+	  <img src="img/baby-veg-broth.jpg"/>
 	  <h3>Baby Vegetable Broth</h3>
 	  <div class="focus-content">
 		<p>A live, hearty broth that makes a great lunch or dinner and is very quick and easy to cook and packed full of essential <i>Alkaline Nutrients.</i><br/> <a href="#" class="btn">Link to source</a>
@@ -490,10 +565,15 @@ margin-bottom: 1rem;
            <li><a href="index.html">Professional Profile |</a></li>
         <li><a href="recipe-imgs.html">Creative Portfolio |</a></li>
             <li><a href="contact.html">Contact Me |</a></li>
-            <li><a href="#">Linked In |</a></li>
+            <li><a href="https://www.linkedin.com/in/chrisharradine" target="_blank">Linked In |</a></li>
           </ul>
+          
+          <div class="footer__DMI">
+      <h4>Powered By DMI </h4><img src="img/DMI-Logo.png" >
+      </div>
+          
       <p class="copy-text">&copy; MMXXIV Christopher Harradine</p>
-      Powered By DMI 
+   
         </footer>
     
                     <!-- Footer End -->             
