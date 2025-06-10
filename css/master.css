@@ -658,6 +658,7 @@ grid-template-columns: 1.1fr 1.1fr 2fr .5fr;
   padding-bottom: 2px;
   text-decoration: underline 1.5px var(--color-purp-2);
   font-size: 32px;
+  backdrop-filter: blur(40px);
 }
 
 .page-header__title__slider {
